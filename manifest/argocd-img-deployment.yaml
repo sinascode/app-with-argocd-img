@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: argocd-img-container
-        image: sinasdocker/app-with-argocd-img
+        image: nginx
