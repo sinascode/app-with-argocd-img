@@ -1,0 +1,7 @@
+resource:
+  - argocd-img-deployment.yaml
+  - argocd-img-service.yaml
+image:
+  - name: argocd-img-container
+    newName: nginx
+    newTag: "1.25"
