@@ -81,6 +81,7 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        set +e
         git config --local user.email "sina@dankook.ac.kr"
         git config --local user.name "sinascode"
         if ! git diff --quiet; then
