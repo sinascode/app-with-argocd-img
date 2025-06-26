@@ -86,13 +86,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        set +e
         git config --local user.email "sina@dankook.ac.kr"
         git config --local user.name "sinascode"
-        if ! git diff --quiet; then
-          git add .
-          git commit -m "Update nginx image to latest"
-          git push
-        else
-          echo "No changes to commit."
-        fi
+        git add .
+        git commit -m "Update nginx image to latest"
+        git push
