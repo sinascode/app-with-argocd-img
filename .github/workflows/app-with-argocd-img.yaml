@@ -83,6 +83,10 @@ jobs:
       run: |
         git config --local user.email "sina@dankook.ac.kr"
         git config --local user.name "sinascode"
-        git add .
-        git commit -m "Update nginx image to latest" || true
-        git push
+        if ! git diff --quiet; then
+          git add .
+          git commit -m "Update nginx image to latest"
+          git push
+        else
+          echo "No changes to commit."
+        fi
