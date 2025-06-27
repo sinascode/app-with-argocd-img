@@ -5,4 +5,4 @@ resource:
 image:
   - name: nginx
     newName: sinasdocker/app-with-argocd-img
-    newTag: "1.25"
+    newTag: 
