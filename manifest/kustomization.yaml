@@ -1,7 +1,8 @@
 resource:
   - argocd-img-deployment.yaml
   - argocd-img-service.yaml
+  - sealed-secret.yaml
 image:
   - name: nginx
-    newName: nginx
+    newName: sinasdocker/app-with-argocd-img
     newTag: "1.25"
